@@ -127,7 +127,7 @@
 <section class="hero teaser">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
-      <h2 class="title is-3">Results</h2>
+      <!-- <h2 class="title is-3">Results</h2> -->
       <div class="content has-text-justified">
         <div style="text-align: center; vertical-align:middle">
           <img src="./static/images/real50.png" width="800">
@@ -159,19 +159,17 @@
             Our framework adopts a two-stage pipeline. In the first stage, we pretrain a restoration 
             module across diversified degradations for improving generalization capability in real-world 
             scenarios. The second stage leverages the generative ability of latent diffusion models, for 
-            achieving realistic image restoration. 
-          </p>
-          <p>
-            Specifically, we introduce an injective modulation sub-network -- LAControlNet for finetuning,
-            while the pre-trained Stable Diffusion is to maintain its generative ability. Finally, we introduce 
-            a controllable module that allows users to balance quality and fidelity by introducing the latent 
-            image guidance in the denoising process during inference.
+            achieving realistic image restoration. Specifically, we introduce an injective modulation sub-network 
+            -- LAControlNet for finetuning, while the pre-trained Stable Diffusion is to maintain its generative 
+            ability. Finally, we introduce a controllable module that allows users to balance quality and fidelity 
+            by introducing the latent image guidance in the denoising process during inference.
           </p>
           <p>
             Extensive experiments have demonstrated its superiority over state-of-the-art approaches for both 
             blind image super-resolution and blind face restoration tasks on both synthetic and real-world 
             datasets.
           </p>
+          <img src="./static/images/arch.png" width="800">
         </div>
       </div>
     </div>

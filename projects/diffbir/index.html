@@ -176,25 +176,25 @@
 
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Method</h2>
-          <div class="content has-text-justified">
-            <img src="./static/images/arch.png" width="800">
-            <div align="center">
-              <b>DiffBIR Architecture</b>
-            </div>
-            <p>
-                The two-stage pipeline of DiffBIR: (1) pretrain a Restoration Module (RM) for degradation 
-                removal to obtain \(I_{reg}\); (2) leverage fixed Stable Diffusion through our proposed 
-                LAControNet for realistic image reconstruction and obtain \(I_{diff}\). RM is trained across 
-                diversified degradations in a self-supervised manner, and is fixed during stage-two. LAControlNet 
-                contains a parallel module that is partially initialized with the denoiser's checkpoint and has 
-                several fusion layers. It uses VAE's encoder to project the \(I_{reg}\) to the latent space, 
-                and performs concatenation with the randomly sampled noisy \(z_t\) as the conditioning mechanism.
-            </p>
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/arch.png" width="800">
+          <div align="center">
+            <b>DiffBIR Architecture</b>
           </div>
+          <p>
+            The two-stage pipeline of DiffBIR: (1) pretrain a Restoration Module (RM) for degradation 
+            removal to obtain \(I_{reg}\); (2) leverage fixed Stable Diffusion through our proposed 
+            LAControNet for realistic image reconstruction and obtain \(I_{diff}\). RM is trained across 
+            diversified degradations in a self-supervised manner, and is fixed during stage-two. LAControlNet 
+            contains a parallel module that is partially initialized with the denoiser's checkpoint and has 
+            several fusion layers. It uses VAE's encoder to project the \(I_{reg}\) to the latent space, 
+            and performs concatenation with the randomly sampled noisy \(z_t\) as the conditioning mechanism.
+          </p>
         </div>
       </div>
+    </div>
     <!--/ Method. -->
     
     <!-- Paper video. -->

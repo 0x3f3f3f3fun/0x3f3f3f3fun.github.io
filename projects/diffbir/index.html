@@ -40,6 +40,8 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -182,9 +184,13 @@
               <b>DiffBIR Architecture</b>
             </div>
             <p>
-              Comparisons of BSRGAN, Real-ESRGAN+, SwinIR-GAN, and our DiffBIR results on real-life images. 
-              DiffBIR is able to (1) generate natural textures; (2) reconstruct semantic regions; (3) not 
-              erase small details; (4) overcome severe case.
+                The two-stage pipeline of DiffBIR: (1) pretrain a Restoration Module (RM) for degradation 
+                removal to obtain \(I_{reg}\); (2) leverage fixed Stable Diffusion through our proposed 
+                LAControNet for realistic image reconstruction and obtain \(I_{diff}\). RM is trained across 
+                diversified degradations in a self-supervised manner, and is fixed during stage-two. LAControlNet 
+                contains a parallel module that is partially initialized with the denoiser's checkpoint and has 
+                several fusion layers. It uses VAE's encoder to project the \(I_{reg}\) to the latent space, 
+                and performs concatenation with the randomly sampled noisy \(z_t\) as the conditioning mechanism.
             </p>
           </div>
         </div>
